@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    
+    <form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+	Master Image
+	<br>
+        <input type="file" name='file1'>
+        <img src="{{url_for('static', filename='file.jpg')}}" alt="None" height=22% width=22%>
+	Query Image
+	<br>
+        <input type="file" name='file2'>
+        <img src="{{url_for('static', filename='file2.jpg')}}" alt="None" height=22% width=22%>
+        <input type="submit" value="Check similarity" name="btn" >
+        <br>
+	{{data}}
+	<br>
+        <img src="{{url_for('static', filename='after.jpg')}}" alt="" height=50% width=50%>
+        
+        
+    </form>
+
+</body>
+
+</html>
